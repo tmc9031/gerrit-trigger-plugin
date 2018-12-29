@@ -2347,7 +2347,7 @@ public class GerritTrigger extends Trigger<Job> {
                             Run<?, ?> run = (Run<?, ?>)currentExecutable;
                             if (checkCausedByGerrit(event, run.getCauses())) {
                                 e.interrupt(
-                                        Result.ABORTED,
+                                        Result.NOT_BUILT,
                                         new NewPatchSetInterruption()
                                 );
                             }
